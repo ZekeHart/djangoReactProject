@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
+from frontend import views as frontendViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/lead/', views.LeadListCreate.as_view() ),
+    path('', frontendViews.index ),
 ]
